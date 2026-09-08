@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranz File - ML DevID Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header na may Reset Buttons sa itaas -->
+    <div class="top-header">
+        <button class="header-btn grey" onclick="resetGenArea()">Reset Generator</button>
+        <button class="header-btn blue" onclick="resetCheckArea()">Reset Checker</button>
+    </div>
+
+    <!-- Main Dashboard -->
+    <div class="main-card">
+        <h1 class="brand-title">RANZ FILE</h1>
+        <p class="subtitle">ML DevID Generator & Checker System</p>
+
+        <!-- Navigation Tabs -->
+        <div class="tab-buttons">
+            <button class="tab-btn active" id="tabGenBtn" onclick="switchTab('genTab')">1. ML DevID Generator</button>
+            <button class="tab-btn" id="tabCheckBtn" onclick="switchTab('checkTab')">2. ML Checker</button>
+        </div>
+
+        <!-- TAB 1: GENERATOR CONTENT -->
+        <div id="genTab" class="tab-content active">
+            <button class="action-btn gen-btn" onclick="generateBatchDevID()">Generate 50 ML DevIDs</button>
+            <textarea id="genOutput" readonly placeholder="Lalabas dito ang 50 generated DevIDs..."></textarea>
+        </div>
+
+        <!-- TAB 2: CHECKER CONTENT -->
+        <div id="checkTab" class="tab-content">
+            <textarea id="checkInput" placeholder="I-paste dito ang hanggang 50 DevIDs (isang DevID bawat linya)..."></textarea>
+            <button class="action-btn check-btn" onclick="checkBatchDevID()">Check 50 DevIDs</button>
+            <div id="checkResults">
+                <!-- Dito lalabas ang mga status -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
