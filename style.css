@@ -1,0 +1,169 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Background Image na may matrix feel */
+    background: linear-gradient(rgba(10, 20, 35, 0.9), rgba(10, 20, 35, 0.9)), 
+                url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1000');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Para sa header at card layout */
+    align-items: center;
+    margin: 0;
+    padding: 15px;
+}
+
+/* Top Header styles */
+.top-header {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.header-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.header-btn.grey {
+    background-color: #334155;
+    color: white;
+}
+
+.header-btn.blue {
+    background-color: #0284c7;
+    color: white;
+}
+
+/* Main Card */
+.main-card {
+    background: rgba(30, 41, 59, 0.9);
+    border: 2px solid #0284c7; /* Glowing blue outline */
+    border-radius: 16px;
+    padding: 25px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 0 25px rgba(2, 132, 199, 0.5);
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+.brand-title {
+    color: #38bdf8;
+    margin: 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 15px rgba(56, 189, 248, 0.7);
+}
+
+.subtitle {
+    color: #94a3b8;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+/* Tabs */
+.tab-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 12px;
+    background: #334155; /* Default dark grey for inactive */
+    color: #94a3b8;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tab-btn.active {
+    background: #0284c7; /* Blue for active */
+    color: #ffffff;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Input/Output area */
+textarea {
+    width: 100%;
+    height: 250px;
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid #334155;
+    color: #38bdf8;
+    padding: 12px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: monospace;
+    font-size: 0.85rem;
+    resize: none;
+    margin-bottom: 15px;
+}
+
+textarea::placeholder {
+    color: rgba(56, 189, 248, 0.5);
+}
+
+/* Large green button */
+.action-btn {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.gen-btn {
+    background-color: #10b981; /* Green */
+    color: white;
+}
+
+.check-btn {
+    background-color: #6366f1; /* Purple/Blue for checker */
+    color: white;
+}
+
+#checkResults {
+    max-height: 250px;
+    overflow-y: auto;
+    text-align: left;
+    background: rgba(15, 23, 42, 0.9);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    font-family: monospace;
+    font-size: 0.8rem;
+}
+
+.res-item {
+    padding: 4px 0;
+    border-bottom: 1px solid #1e293b;
+}
+
+/* Status colors in checker */
+.st-active { color: #4ade80; } /* Green */
+.st-inactive { color: #fbbf24; } /* Orange */
+.st-offline { color: #9ca3af; } /* Grey */
+.st-invalid { color: #f87171; } /* Red */
